@@ -9,6 +9,7 @@ import (
 func TestUpdateTask(t *testing.T) {
     db.InitDB("./test_tasks.db")
     defer db.CloseDB()
+    defer db.DB.Exec("DROP TABLE IF EXISTS tasks")
 
     // Add a task to update
     title := "Task to Update"
