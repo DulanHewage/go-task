@@ -2,15 +2,16 @@ package db
 
 import (
 	"database/sql"
+	"fmt"
 
 	_ "modernc.org/sqlite"
 )
 
 var DB *sql.DB
 
-func InitDB() {
+func InitDB(dbFileName string) error {
     var err error
-    DB, err = sql.Open("sqlite", "./tasks.db")
+    DB, err = sql.Open("sqlite", dbFileName)
     if err != nil {
         panic(err)
     }
@@ -27,5 +28,13 @@ func InitDB() {
 
     if _, err := DB.Exec(createTable); err != nil {
         panic(err)
+    }
+    return nil
+}
+
+// CloseDB closes the database connection
+func CloseDB() {
+    if err := DB.Close(); err != nil {
+        fmt.Printf("failed to close database: %v", err)
     }
 }

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-    db.InitDB()
+    db.InitDB("./tasks.db")
 
     var rootCmd = &cobra.Command{Use: "task-manager"}
 

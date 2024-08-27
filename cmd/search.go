@@ -6,16 +6,22 @@ import (
 	"task-manager-cli/models"
 )
 
-func SearchTasks(keyword string) {
+// SearchTasks searches for tasks that match the given keyword and returns them.
+func SearchTasks(keyword string) ([]models.Task, error) {
     rows, err := db.DB.Query("SELECT id, title, description FROM tasks WHERE title LIKE ? OR description LIKE ?", "%"+keyword+"%", "%"+keyword+"%")
     if err != nil {
-        fmt.Println("Error searching tasks:", err)
+        return nil, fmt.Errorf("error searching tasks: %v", err)
     }
     defer rows.Close()
 
+    var tasks []models.Task
     for rows.Next() {
         var task models.Task
-        rows.Scan(&task.ID, &task.Title, &task.Description)
+        if err := rows.Scan(&task.ID, &task.Title, &task.Description); err != nil {
+            return nil, err
+        }
+        tasks = append(tasks, task)
         fmt.Printf("%d: %s - %s\n", task.ID, task.Title, task.Description)
     }
+    return tasks, nil
 }

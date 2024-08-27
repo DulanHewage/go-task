@@ -1,2 +1,3 @@
 task-manager-cli
 tasks.db
+cmd/test_tasks.db
