@@ -46,6 +46,26 @@ The Task Manager CLI is a command-line interface (CLI) tool built with GoLang. U
    go build -o go-task
    ```
 
+### Run tests
+
+Run all tests:
+
+```sh
+go test ./cmd/...
+```
+
+Run a specific test file:
+
+```sh
+go test ./cmd/add_test.go
+```
+
+Run tests with verbose output:
+
+```sh
+go test -v ./cmd/...
+```
+
 ### Usage
 
 After building the project, you can use the CLI tool by running the generated binary:
