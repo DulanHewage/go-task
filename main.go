@@ -1,9 +1,9 @@
 package main
 
 import (
+	"go-task/cmd"
+	"go-task/db"
 	"os"
-	"task-manager-cli/cmd"
-	"task-manager-cli/db"
 
 	"github.com/spf13/cobra"
 )

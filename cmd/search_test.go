@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"task-manager-cli/db"
+	"go-task/db"
 	"testing"
 )
 

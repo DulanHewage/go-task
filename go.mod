@@ -1,4 +1,4 @@
-module task-manager-cli
+module go-task
 
 go 1.21.2
 

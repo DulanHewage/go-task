@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	"task-manager-cli/db"
+	"go-task/db"
 )
 
 func CompleteTask(id int) {

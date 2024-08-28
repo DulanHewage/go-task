@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"task-manager-cli/db"
-	"task-manager-cli/models"
+	"go-task/db"
+	"go-task/models"
 )
 
 // SearchTasks searches for tasks that match the given keyword and returns them.

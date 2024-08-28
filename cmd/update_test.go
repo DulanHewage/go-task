@@ -1,8 +1,8 @@
 package cmd
 
 import (
-	"task-manager-cli/db"
-	"task-manager-cli/models"
+	"go-task/db"
+	"go-task/models"
 	"testing"
 )
 

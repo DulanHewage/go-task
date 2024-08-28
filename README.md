@@ -30,8 +30,8 @@ The Task Manager CLI is a command-line interface (CLI) tool built with GoLang. U
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/dulanhewage/task-manager-cli.git
-   cd task-manager-cli
+   git clone https://github.com/dulanhewage/go-task.git
+   cd go-task
    ```
 
 2. **Install dependencies**:
@@ -43,7 +43,7 @@ The Task Manager CLI is a command-line interface (CLI) tool built with GoLang. U
 3. **Build the project**:
 
    ```sh
-   go build -o task-manager-cli
+   go build -o go-task
    ```
 
 ### Usage
@@ -51,7 +51,7 @@ The Task Manager CLI is a command-line interface (CLI) tool built with GoLang. U
 After building the project, you can use the CLI tool by running the generated binary:
 
 ```sh
-./task-manager-cli --help
+./go-task --help
 ```
 
 ### Example
@@ -61,35 +61,35 @@ Here is an example of how to use the Task Manager CLI:
 1. Add a new task:
 
 ```sh
-./task-manager-cli add --title "Buy groceries" --description "Milk, Bread, Eggs"
+./go-task add --title "Buy groceries" --description "Milk, Bread, Eggs"
 ```
 
 2. List all tasks:
 
 ```sh
-./task-manager-cli list
+./go-task list
 ```
 
 3. Update a task:
 
 ```sh
-./task-manager-cli update --id 1 --title "Buy groceries and fruits" --description "Milk, Bread, Eggs, Apples"
+./go-task update --id 1 --title "Buy groceries and fruits" --description "Milk, Bread, Eggs, Apples"
 ```
 
 4. Mark a task as completed:
 
 ```sh
-./task-manager-cli complete --id 1
+./go-task complete --id 1
 ```
 
 5. Search tasks by keyword:
 
 ```sh
-./task-manager-cli search --keyword "groceries"
+./go-task search --keyword "groceries"
 ```
 
 6. Delete a task:
 
 ```sh
-./task-manager-cli delete --id 1
+./go-task delete --id 1
 ```

@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"task-manager-cli/db"
-	"task-manager-cli/models"
+	"go-task/db"
+	"go-task/models"
 )
 
 // ListTasks retrieves all tasks from the database and returns them.
