@@ -21,10 +21,14 @@ func ListTasks() ([]models.Task, error) {
             return nil, err
         }
         tasks = append(tasks, task)
+        completedStatus := "In Progress"
+    if task.Completed.Bool {
+        completedStatus = "Completed"
+    }
         if task.Description != "" {
-            fmt.Printf("%d: %s - %s (Completed: %t)\n", task.ID, task.Title, task.Description, task.Completed.Bool)
+            fmt.Printf("%d: %s - %s (%s)\n", task.ID, task.Title, task.Description, completedStatus)
         } else {
-            fmt.Printf("%d: %s (Completed: %t)\n", task.ID, task.Title, task.Completed.Bool)
+            fmt.Printf("%d: %s (%s)\n", task.ID, task.Title, completedStatus)
         }
     }
     return tasks, nil
