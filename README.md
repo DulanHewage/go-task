@@ -1,4 +1,4 @@
-# Task Manager CLI with GoLang and SQLite
+# Task Manager CLI with GoLang and SQLite 📟
 
 The Task Manager CLI is a command-line interface (CLI) tool built with GoLang. Users can add, view, update, and delete tasks, all of which are stored in a SQLite database.
 
