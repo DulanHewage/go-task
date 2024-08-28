@@ -21,7 +21,11 @@ func ListTasks() ([]models.Task, error) {
             return nil, err
         }
         tasks = append(tasks, task)
-        fmt.Printf("%d: %s - %s (Completed: %t)\n", task.ID, task.Title, task.Description, task.Completed)
+        if task.Description != "" {
+            fmt.Printf("%d: %s - %s (Completed: %t)\n", task.ID, task.Title, task.Description, task.Completed.Bool)
+        } else {
+            fmt.Printf("%d: %s (Completed: %t)\n", task.ID, task.Title, task.Completed.Bool)
+        }
     }
     return tasks, nil
 }
